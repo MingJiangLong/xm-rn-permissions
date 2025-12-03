@@ -94,10 +94,6 @@ export const requestPermission = async (permissionCode: PermissionCode): Promise
         }
 
         const result = await request(requestCode);
-        if (permissionCode == PermissionCode.Contact) {
-            if (result == RESULTS.GRANTED || result == RESULTS.LIMITED) return RESULTS.GRANTED;
-        }
-
         return result
     } finally {
         requestPermissionStatusManager.update("idle")
@@ -143,15 +139,6 @@ export const requestMultiplePermissions = async (permissions: PermissionCode[]) 
             }
 
             const requestResultStatus = requestResultMap[permissionStr]
-            if (permission == PermissionCode.Contact) {
-                return [
-                    ...pre,
-                    {
-                        serviceCode: permission,
-                        status: (requestResultStatus == RESULTS.GRANTED || requestResultStatus == RESULTS.LIMITED) ? RESULTS.GRANTED : requestResultStatus
-                    }
-                ]
-            }
             return [...pre, {
                 serviceCode: permission,
                 status: requestResultStatus
