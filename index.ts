@@ -3,7 +3,7 @@ import { Permission, PERMISSIONS, PermissionStatus, request, requestMultiple, RE
 import { requestPermission as requestFirebasePermission, getMessaging, AuthorizationStatus } from '@react-native-firebase/messaging'
 import { getApp } from '@react-native-firebase/app'
 const IGNORED_PERMISSION = "ignored_permission"
-type XM_PermissionStatus = PermissionStatus | typeof IGNORED_PERMISSION
+export type XM_PermissionStatus = PermissionStatus | typeof IGNORED_PERMISSION
 export enum PermissionCode {
     Camera = "0",
     Application = "1",
