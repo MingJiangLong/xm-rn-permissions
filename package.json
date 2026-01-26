@@ -13,7 +13,7 @@
     "react-native":"*",
     "react":"*",
     "react-native-permissions": "*",
-    "@react-native-firebase/app": "22.4.0|22.5.0",
-    "@react-native-firebase/messaging": "22.4.0|22.5.0"
+    "@react-native-firebase/app": "*",
+    "@react-native-firebase/messaging": "*"
   }
 }
