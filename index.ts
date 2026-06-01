@@ -51,8 +51,8 @@ const PermissionsInfo: Record<PermissionCode, Permission | undefined> = {
         android: PERMISSIONS.ANDROID.READ_CALENDAR
     }),
     [PermissionCode.Microphone]: Platform.select({
-        ios: PERMISSIONS.ANDROID.RECORD_AUDIO,
-        android: PERMISSIONS.IOS.MICROPHONE
+        android: PERMISSIONS.ANDROID.RECORD_AUDIO,
+        ios: PERMISSIONS.IOS.MICROPHONE
     }),
     [PermissionCode.UserTracking]: Platform.select({
         ios: PERMISSIONS.IOS.APP_TRACKING_TRANSPARENCY,
